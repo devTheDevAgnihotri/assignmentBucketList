@@ -1,0 +1,13 @@
+img
+    {
+        min-height: 300px;
+        width: 100%;
+        cursor: pointer;
+		transition: all 0.2s linear;
+        
+    }
+
+    img:hover
+    {       
+        transform: scale(1.05);
+    }
