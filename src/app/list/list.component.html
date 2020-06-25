@@ -1,62 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 <body>
     <header>
-        <h1 class="text-white bg-dark py-4 pl-3">My Desings</h1>
+    <h1 class="text-secondary bg-dark py-2 pl-3 font-weight-bold ic " >WOOVLY</h1>
     </header>
 
+
+<!-- "https://images.woovly.com/w_200/2866d990-9094-11ea-af5d-fffbbc6efc1d.jpg" -->
     <main>
         <div class="container-fluid">
             <div class="row mt-5 mx-3">
+                <div class="col-12">
+                    <h1 class="maintext d-none d-md-block">Explore. Plan. <font style="color:red"class="maintext">Accomplish</font></h1>
+                </div>
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3" *ngFor = "let item of lists">
-                    <img src = "wp4.jpg" class="img-responsive">
-                    <h3 class="mt-2">{{item['name']}}</h3>
-                    <h6 class="text-secondary">Sub Heading</h6>
+                    <div  class="box">
+                    <img [src] = item.bkt_image class="img-responsive">
+                    <!-- <img src="assets/Dev.jpg"> -->
+                    <div class="d-flex justify-content-center">
+                        <div class="text-center align ">
+                            
+
+                            <span class="fa fa-heart icon"> {{item['likeCount']}}</span>
+                        </div>
+                    </div>
+                    
+                    <h3  class="mt-2 pt-4 pl-3 ">{{item['bkt_name']}}</h3> 
+                    <h6 class="text-secondary pb-5 pl-3">{{item['bkt_name_seo']}}</h6>
                 </div>
-                <!-- <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
-                    <img src = "wp4.jpg" class="img-responsive">
-                    <h3 class="mt-2">Wallpaper1</h3>
-                    <h6 class="text-secondary">Sub Heading</h6>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
-                    <img src = "wp4.jpg" class="img-responsive">
-                    <h3 class="mt-2">Wallpaper1</h3>
-                    <h6 class="text-secondary">Sub Heading</h6>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
-                    <img src = "wp4.jpg" class="img-responsive">
-                    <h3 class="mt-2">Wallpaper1</h3>
-                    <h6 class="text-secondary">Sub Heading</h6>
-                </div><div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
-                    <img src = "wp4.jpg" class="img-responsive">
-                    <h3 class="mt-2">Wallpaper1</h3>
-                    <h6 class="text-secondary">Sub Heading</h6>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
-                    <img src = "wp4.jpg" class="img-responsive">
-                    <h3 class="mt-2">Wallpaper1</h3>
-                    <h6 class="text-secondary">Sub Heading</h6>
-                </div><div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
-                    <img src = "wp4.jpg" class="img-responsive">
-                    <h3 class="mt-2">Wallpaper1</h3>
-                    <h6 class="text-secondary">Sub Heading</h6>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
-                    <img src = "wp4.jpg" class="img-responsive">
-                    <h3 class="mt-2">Wallpaper1</h3>
-                    <h6 class="text-secondary">Sub Heading</h6>
-                </div><div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
-                    <img src = "wp4.jpg" class="img-responsive">
-                    <h3 class="mt-2">Wallpaper1</h3>
-                    <h6 class="text-secondary">Sub Heading</h6>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
-                    <img src = "wp4.jpg" class="img-responsive">
-                    <h3 class="mt-2">Wallpaper1</h3>
-                    <h6 class="text-secondary">Sub Heading</h6>
-                </div> -->
-            </div>
+               </div>
         </div>
     </main>
 

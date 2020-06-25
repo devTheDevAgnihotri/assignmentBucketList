@@ -14,13 +14,16 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
     this.auth.showLists().subscribe((res)=>{      
-      console.log(res["results"])
-      //to display 20 pokemon lists
-      for(let i=0;i<20;i++){
-        this.lists.push(res["results"][i]);
+      console.log(res['body']['result'])
+      
+      for(let i=0;i<5;i++){
+        res['body']['result'][i]['bkt_image'] =  "https://images.woovly.com/w_200/" + res['body']['result'][i]['bkt_image'] ;
+        this.lists.push(res['body']['result'][i]);
       }
     })
   }
+
+  
 
   //button function to get the url when clicked
 

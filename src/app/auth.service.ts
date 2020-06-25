@@ -13,8 +13,20 @@ export class AuthService {
  detailurl = "";                                   //Global variable to get the api url from button onclick
 
   showLists(){
-    return this.http.get(this.url);               //returning the pokemon list url
-  }
+
+
+   let headers = new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': 'https://www.woovly.com'
+        
+     });
+     let options = {
+        headers: headers,  withCredentials :false  , observe: 'response' as 'body'}
+      
+      return this.http.post(this.url, "{}",  options )}
+
+    //return this.http.get(this.url);               //returning the pokemon list url
+  
 
   
 }
